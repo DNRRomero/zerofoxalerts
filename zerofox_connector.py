@@ -200,7 +200,7 @@ class ZeroFoxClient:
         return {
             "Authorization": f"Token {self.token}",
             "Content-Type": "application/json",
-            "zf-source": "splunk",
+            "zf-source": "Splunk-SOAR",
         }
 
     def fetch_alerts(self):
@@ -224,7 +224,7 @@ class ZerofoxAlertsConnector(BaseConnector):
         return {
             "Authorization": f"Token {self._api_key}",
             "Content-Type": "application/json",
-            "zf-source": "splunk",
+            "zf-source": "Splunk-SOAR",
         }
 
     def _process_empty_response(self, response, action_result):
